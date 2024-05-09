@@ -1,2 +1,28 @@
+from inventory_report.product import Product
+
+
 def test_create_product() -> None:
-    raise NotImplementedError
+    test_product = Product(
+        id="1",
+        product_name="Gabigol de Pelúcia",
+        company_name="Flamengo",
+        manufacturing_date="2024-05-09",
+        expiration_date="2034-05-09",
+        serial_number="123456",
+        storage_instructions="Cuidar com carinho",
+    )
+
+    assert test_product.id == "1"
+    assert test_product.product_name == "Gabigol de Pelúcia"
+    assert test_product.company_name == "Flamengo"
+    assert test_product.manufacturing_date == "2024-05-09"
+    assert test_product.expiration_date == "2034-05-09"
+    assert test_product.serial_number == "123456"
+    assert test_product.storage_instructions == "Cuidar com carinho"
+    assert (
+        str(test_product)
+        == "The product 1 - Gabigol de Pelúcia with serial number 123456 "+
+        "manufactured on 2024-05-09 by the company Flamengo "+
+        "valid until 2034-05-09 must be stored according to "+
+        "the following instructions: Cuidar com carinho."
+    )
