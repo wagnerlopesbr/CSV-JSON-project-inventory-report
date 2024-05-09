@@ -10,8 +10,7 @@ class Inventory:
     def __init__(self, data: Optional[List[Product]] = None) -> None:
         self.__data = data or []
 
-    def add_data(self, product: Product) -> None:
-        self.__data.append(product)
+    def add_data(self, data: List[Product]) -> None:
+        self.__data.extend(data)
         # append() would add a list of products as a single product
         # extend() would add a list of products but the Product class
-        #   would have to be iterable (which it isn't) and I can't change it
