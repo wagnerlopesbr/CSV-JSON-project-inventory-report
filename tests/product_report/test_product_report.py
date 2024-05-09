@@ -14,8 +14,8 @@ def test_product_report() -> None:
 
     assert (
         str(test_product)
-        == "The product 1 - Gabigol de Pelúcia with serial number 123456 "+
-        "manufactured on 2024-05-09 by the company Flamengo "+
-        "valid until 2034-05-09 must be stored according to "+
+        == "The product 1 - Gabigol de Pelúcia with serial number 123456 " +
+        "manufactured on 2024-05-09 by the company Flamengo " +
+        "valid until 2034-05-09 must be stored according to " +
         "the following instructions: Cuidar com carinho."
     )
